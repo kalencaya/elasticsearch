@@ -73,6 +73,10 @@ class Elasticsearch extends EnvironmentAwareCommand {
      * Main entry point for starting elasticsearch
      */
     public static void main(final String[] args) throws Exception {
+        System.setProperty("es.path.conf", "/Users/wangqi/Documents/工作目录/Git_repository/elasticsearch/home/config/");
+        System.setProperty("es.path.home", "/Users/wangqi/Documents/工作目录/Git_repository/elasticsearch/home/");
+        System.setProperty("log4j2.disable.jmx", "true");
+        System.setProperty("java.security.policy", "/Users/wangqi/Documents/工作目录/Git_repository/elasticsearch/home/config/java.policy");
         overrideDnsCachePolicyProperties();
         /*
          * We want the JVM to think there is a security manager installed so that if internal policy decisions that would be based on the
